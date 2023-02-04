@@ -1,0 +1,180 @@
+* {
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+  background-position: right top, left bottom;
+  background-attachment: fixed, fixed;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 25%, 25%;
+  background-color: #fbfafd;
+}
+.header,
+.toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  color: #6f7090;
+}
+.input-Toggle {
+  margin: 0px 2%;
+}
+.card-Front,
+.card-Left,
+.card-Right {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2%;
+}
+
+.card-1 {
+  width: 290px;
+  height: 370px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgb(68, 74, 191);
+  background: linear-gradient(
+    298deg,
+    rgb(110, 114, 198) 19%,
+    rgb(172, 174, 239) 83%
+  );
+  padding: 3% 0.5% 3% 0.5%;
+  color: white;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+.card {
+  width: 260px;
+  height: 340px;
+  margin-top: 17px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 3% 0.5% 3% 0.5%;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 0 25px rgba(220, 220, 220, 0.772);
+}
+
+h3 {
+  font-size: 48px;
+  margin-top: 20px;
+}
+.card-1 > ul > li {
+  border-top: 1px solid rgba(255, 255, 255, 0.316);
+  list-style: none;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+  font-size: 14px;
+}
+.card > ul > li {
+  border-top: 1px solid rgba(203, 198, 198, 0.892);
+  list-style: none;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+  font-size: 14px;
+}
+.card > ul {
+  margin-top: 15px;
+}
+.card-1 > ul {
+  margin-top: 30px;
+}
+.center-button {
+  color: rgb(110, 114, 198);
+  width: 90%;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+.left-button,
+.right-button {
+  color: white;
+  background: rgb(68, 74, 191);
+  background: linear-gradient(
+    298deg,
+    rgb(110, 114, 198) 19%,
+    rgb(172, 174, 239) 83%
+  );
+  width: 90%;
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+h4 {
+  margin-top: 10px;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .card-1 {
+    width: 260px;
+    height: 340px;
+    margin-top: 17px;
+  }
+  .card > ul {
+    margin-top: 30px;
+  }
+}
+
+/* Toggle */
+input:where([type="checkbox"][role="switch"]) {
+  appearance: none;
+  position: relative;
+  color: inherit;
+  font-size: inherit;
+  width: 3.6em;
+  height: 1.6em;
+  box-sizing: content-box;
+  border: 1px solid;
+  border-radius: 1em;
+  vertical-align: text-bottom;
+  margin: auto;
+  background: rgb(68, 74, 191);
+  background: linear-gradient(
+    298deg,
+    rgb(110, 114, 198) 19%,
+    rgb(172, 174, 239) 83%
+  );
+  cursor: pointer;
+}
+input:where([type="checkbox"][role="switch"])::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  box-sizing: border-box;
+  width: 1.4em;
+  height: 1.4em;
+  margin: 0 0.15em;
+  border: 1px solid;
+  border-radius: 50%;
+  background: white;
+  box-shadow: inset 4px 0 4px rgb(190, 189, 189);
+  transition: 0.2s;
+}
+input:where([type="checkbox"][role="switch"]):checked::before {
+  /* left: 2em; */
+  transform: translateY(-50%) translateX(2em);
+}
